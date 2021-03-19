@@ -118,15 +118,15 @@ public class MainActivity extends AppCompatActivity {
         //Serializacion
         String coordStr = gson.toJson(info);
          new Thread(
-                 ()->{
+                 ()-> {
 
-                try {
-                    bWriter.write(coordStr + "\n");
-                    bWriter.flush();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+                     try {
+                         bWriter.write(coordStr + "\n");
+                         bWriter.flush();
+                     } catch (IOException e) {
+                         e.printStackTrace();
+                     }
+                 }
     ).start();
 
 
